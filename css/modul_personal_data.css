@@ -1,0 +1,208 @@
+.pd-box__section {
+  display: none;
+}
+.pd-box__section-active {
+  display: block;
+}
+.pd-box__row {
+  padding: 10px 0;
+}
+.pd-box__row-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 600px;
+}
+.pd-box__text {
+  font-size: 24px;
+  color: #000;
+}
+.pd-box__text span {
+  font-weight: 700;
+  font-size: inherit;
+}
+.pd-box__input {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  font-size: 24px;
+  border: 1px solid #f2cc2f;
+  transition: 0.4s;
+  padding: 5px;
+  outline: none;
+}
+.pd-box__input-wrong {
+  border-color: #f00;
+}
+.pd-box__btn {
+  display: block;
+  padding: 10px 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+  background: #f2cc2f;
+  cursor: pointer;
+  color: #000;
+  border: 0;
+  outline: none;
+}
+.manage {
+  padding: 100px 0 0 0;
+  display: flex;
+  flex-direction: column;
+}
+.manage__link {
+  color: #f2cc2f;
+  font-size: 24px;
+  margin: 0 0 20px 0;
+  display: block;
+  cursor: pointer;
+}
+.manage__link:last-child {
+  margin: 0;
+}
+.manage__link:hover {
+  text-decoration: underline;
+}
+.pass_overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #000;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: none;
+}
+.pass {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 100%;
+  max-width: 500px;
+  z-index: 1000;
+  padding: 60px 20px 20px 20px;
+}
+.pass__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 10px 0;
+}
+.pass__btn-close {
+  background-color: transparent;
+  border: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  background-image: url("/images/icons/icon_cross.svg");
+  outline: none;
+}
+.pass__row {
+  padding: 10px 0;
+}
+.pass__row-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+.pass__input {
+  display: block;
+  width: 100%;
+  font-size: 24px;
+  border: 1px solid #f2cc2f;
+  transition: 0.4s;
+  padding: 5px;
+  outline: none;
+}
+.pass__input-wrong {
+  border-color: #f00;
+}
+.pass__btn-submit {
+  display: block;
+  padding: 10px 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+  background: #f2cc2f;
+  cursor: pointer;
+  color: #000;
+  border: 0;
+  outline: none;
+}
+@media screen and (max-width: 1500px) {
+  .manage {
+    padding: 50px 0 0 0;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .pd-box__row {
+    padding: 5px 0;
+  }
+  .pd-box__row-btn {
+    max-width: 100%;
+  }
+  .pd-box__text {
+    font-size: 20px;
+  }
+  .pd-box__input {
+    font-size: 20px;
+    max-width: 100%;
+  }
+  .pd-box__btn {
+    font-size: 18px;
+  }
+  .manage {
+    padding: 30px 0 0 0;
+  }
+  .manage__link {
+    font-size: 20px;
+    margin: 0 0 10px 0;
+  }
+  .pass__title {
+    font-size: 20px;
+  }
+  .pass__row {
+    padding: 5px 0;
+  }
+  .pass__input {
+    font-size: 20px;
+  }
+  .pass__btn-submit {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .pd-box__text {
+    font-size: 14px;
+  }
+  .pd-box__input {
+    font-size: 14px;
+  }
+  .pd-box__btn {
+    font-size: 12px;
+  }
+  .manage {
+    padding: 20px 0 0 0;
+  }
+  .manage__link {
+    font-size: 14px;
+  }
+  .pass__title {
+    font-size: 14px;
+  }
+  .pass__input {
+    font-size: 14px;
+  }
+  .pass__btn-submit {
+    font-size: 12px;
+  }
+}

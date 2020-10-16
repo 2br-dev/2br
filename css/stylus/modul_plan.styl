@@ -1,0 +1,374 @@
+@import './props.styl'
+//
+//
+//
+.list 
+    &__task
+        font-size: 24px
+        padding: 10px 0
+        color: color_1
+        //
+        &-complete
+            text-decoration: line-through
+            text-decoration-color: color_6
+            color: color_6
+// 
+.calendar 
+    padding: 100px 0 0 0
+    // display: flex
+    max-width: 1050px
+    margin: 0 auto
+    //
+    &__body 
+        width: 100%
+    //
+    &__head
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: stretch
+        border: 1px solid color_6
+        //
+        &_title
+            font-size: 36px
+            font-weight: 700
+            flex-grow: 1
+            text-align: center
+            padding: 10px 0
+            border-right: 1px solid color_6
+
+        //
+        &_btn
+            flex-shrink: 0
+            width: calc(100% / 7)
+            background-color: transparent
+            border: 0
+            background-repeat: no-repeat
+            background-position: center
+            background-size: 30px 30px
+            transition: 0.1s
+            cursor pointer
+            outline: none 
+            //
+            &-prev
+                border-right: 1px solid color_6
+                background-image: url(/images/icons/icon_arrow_prev.svg)
+                //
+                &:hover
+                    background-image: url(/images/icons/icon_arrow_prev_yellow.svg)
+            //
+            &-next
+                background-image: url(/images/icons/icon_arrow_next.svg)
+                //
+                &:hover
+                    background-image: url(/images/icons/icon_arrow_next_yellow.svg)
+    //
+    &__conteiner
+        display: flex
+        flex-wrap: wrap
+        justify-content: flex-start
+        border-right: 1px solid color_6 
+        border-left: 1px solid color_6 
+        //
+        &_item
+            withoutHighlighting()
+            width: calc(100% / 7)
+            height: 150px
+            border-right: 1px solid color_6 
+            border-bottom: 1px solid color_6
+            cursor pointer
+            position: relative
+            display: flex
+            align-items: flex-end
+            padding: 5px
+            background-position: calc(100% + 1px) 0
+            background-size: auto 30%
+            background-repeat: no-repeat
+            //
+            &:nth-child(7n)
+                border-right: 0
+            //
+            //
+            //
+            &-hide
+                background-color: #fff
+                //
+                & ^[2]_num
+                    color: transparent
+                & ^[2]_text
+                    color: transparent
+            //
+            &-event
+                background-image: url(/images/icons/icon_event_yellow.svg)                
+                //
+                & ^[2]_num
+                    left: 10px
+                    top: -18px
+                    font-size: 72px
+                    font-weight: 700
+                    color: color_1
+            //
+            &-past 
+                //
+                & ^[2]_num
+                    top: -3px
+                    left 5px
+                    font-size: 36px
+                    font-weight: 400
+                    color: color_6
+                //
+                &^[2]-event
+                    background-image: url(/images/icons/icon_event_grey.svg)
+            //
+            &-today
+                background-color: #eee
+            //
+            &-select
+                background-color: color_3
+            //
+            //
+            //
+            &_num
+                position: absolute
+                top: -3px
+                left 5px
+                font-size: 36px
+                color: color_1
+            //
+            &_text
+                font-size: 18px
+                color: color_1
+                width: 100%
+                max-height: 70px
+                text-overflow: ellipsis
+                overflow: hidden
+//
+.card
+    flex-grow: 1
+    background: color_3
+    opacity 0
+    transition: tDelay
+    withoutHighlighting()
+    flex-direction: column
+    flex-shrink: 0
+    border: 1px solid color_6
+    border-top: 0
+    display: none
+    // 
+    &-visible
+        display: flex
+        opacity 1
+    //
+    &__title
+        flex-shrink: 0
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 10px
+        height 64px
+        //
+        &-text
+            font-size: 36px
+            font-weight: 700
+            color: color_1
+            flex-shrink: 0
+            margin: 0 20px 0 0
+            //
+            &:last-child
+                margin: 0
+    //
+    &__body
+        width: 100%
+        padding: 20px 10px
+    //
+    &__task
+        font-size: 24px
+        color: color_1
+        padding: 5px 0
+    //
+    &__bottom
+        flex-shrink: 0
+        padding: 10px
+    //
+    &__text
+        font-size: 18px
+        color: color_1
+
+//
+//
+//
+@media screen and (max-width: 1500px)
+    .calendar 
+        padding: 50px 0 0 0
+// 
+@media screen and (max-width: 1300px)
+    // 
+    .calendar 
+        &__conteiner
+            &_item
+                height: 120px
+                &_num
+                    top: -2px
+                    left 2px
+                    font-size: 25px
+                &_text
+                    max-height: 60px
+                    font-size: 16px
+                //
+                &-event
+                    //
+                    & ^[2]_num
+                        left: 5px
+                        top: -12px
+                        font-size: 50px
+                //
+                &-past
+                    & ^[2]_num
+                        top: -2px
+                        left 2px
+                        font-size: 25px
+
+
+// 
+@media screen and (max-width: 1000px)
+    .list 
+        &__task
+            font-size: 20px
+    // 
+    .calendar 
+        padding: 30px 0 0 0
+        //
+        &__head
+            //
+            &_title
+                font-size: 20px
+                padding: 5px 0
+            //
+            &_btn
+                background-size: 20px 20px
+        //
+        &__conteiner
+            //
+            &_item
+                width: calc(100% / 7)
+                height: 90px
+                //
+                // 
+                &-event
+                    //
+                    & ^[2]_num
+                        left: 5px
+                        top: -5px
+                        font-size: 30px
+                        
+                //
+                &-past
+                    & ^[2]_num
+                        top: -1px
+                        left 5px
+                        font-size: 20px
+                //
+                &_num
+                    position: absolute
+                    top: -1px
+                    left 5px
+                    font-size: 20px
+                //
+                &_text
+                    font-size: 12px
+                    max-height: 51px
+    //
+    .card
+        //
+        &__title
+            padding: 5px
+            height 37px
+            //
+            &-text
+                font-size: 20px
+                margin: 0 10px 0 0
+        //
+        &__body
+            padding: 10px 5px
+        //
+        &__task
+            font-size: 16px
+            padding: 5px 0
+        //
+        &__bottom
+            padding: 5px
+        //
+        &__text
+            font-size: 12px
+
+// 
+@media screen and (max-width: 750px)
+    .list 
+        &__task
+            font-size: 14px
+    // 
+    .calendar 
+        padding: 20px 0 0 0
+        flex-direction: column
+        //
+        &__head
+            //
+            &_title
+                font-size: 18px
+                padding: 5px 0
+        //
+        &__conteiner
+            //
+            &_item
+                padding: 2px
+                height: 60px
+                //
+                &-event
+                    //
+                    & ^[2]_num
+                        left: 2px
+                        top: -2px
+                        font-size: 18px
+                //
+                &-past
+                    & ^[2]_num
+                        top: 0px
+                        left 2px
+                        font-size: 14px
+                //
+                &_num
+                    top: 0px
+                    left 2px
+                    font-size: 14px
+                //
+                &_text
+                    font-size: 10px
+                    max-height: 36px
+
+    //
+    .card
+        width: 100%
+        max-width: initial
+
+        &__title
+            width: 100%
+            padding: 5px
+            height initial
+            //
+            &-text
+                font-size: 18px
+        //
+        &__body
+            width: 100%
+            padding: 5px
+        //
+        &__task
+            font-size: 16px
+            padding: 5px 0
+        //
+        &__bottom
+            padding: 5px
+        //
+        &__text
+            font-size: 12px

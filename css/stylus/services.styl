@@ -1,0 +1,137 @@
+@import './props.styl'
+//
+//
+//
+.main
+    background-color: color_2
+//
+.banner
+    width: 100%
+    //
+    &__img
+        display: block
+        width: 100%
+        height: auto
+// 
+.body
+    padding: 0 30px
+//
+.title 
+    font-size: 170px
+    color: color_3
+    font-weight: 700
+//
+//
+//
+.box-flex 
+    display: flex
+    width: 100%
+    max-width 1200px
+    margin: 0 auto
+    padding: 100px 0
+    // 
+    &__col
+        width: 50%
+        flex-shrink: 0
+        display: flex
+        //
+        &_box-label
+            flex-shrink: 0
+        //
+        &_label 
+            display: block
+            width: 100%
+            max-width: 125px
+            height auto
+    //
+    &__content
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        //
+        &_list
+            width: 100%
+            padding: 0 20px
+        //
+        &_text
+            font-size: 18px
+            color: color_1
+            margin: 0 0 10px 0
+        //
+        &_link
+            font-size: 18px
+            color: color_1
+            padding: 0 20px
+//
+//
+//
+@media screen and (max-width: 1500px) 
+    .body
+        padding: 0 20px
+    //
+    .title 
+        font-size: 110px
+    //
+    .box-flex 
+        padding: 50px 0
+       
+//
+//
+//
+@media screen and (max-width: 1000px) 
+    .body
+        padding: 0 15px
+    //
+    .title 
+        font-size: 100px
+    //
+    //
+    .box-flex 
+        padding: 30px 0
+        // 
+        &__col
+            &_label 
+                max-width: 90px
+        //
+        &__content
+            &_list
+                padding: 0 15px
+            &_link
+                padding: 0 15px
+// 
+// 
+// 
+@media screen and (max-width: 750px) 
+    .body
+        padding: 0 10px
+    //
+    .title 
+        font-size: 50px
+    //
+    .box-flex 
+        flex-direction: column
+        padding: 40px 0
+        // 
+        &__col
+            width: 100%
+            margin: 0 0 40px 0
+            //
+            &:last-child
+                margin: 0
+            //
+            &_box-label
+                max-width: 50px
+        //
+        &__label
+            max-width: 50px
+        //
+        &__content
+            &_list
+                padding: 0 20px
+            //
+            &_text
+                font-size: 14px
+            //
+            &_link
+                font-size: 14px
+                padding: 0 20px

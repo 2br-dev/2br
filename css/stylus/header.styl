@@ -1,0 +1,599 @@
+@import './props.styl'
+//
+//
+//
+.header
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    background: transparent
+    z-index: 100
+    &::before
+        content: ''
+        position: absolute
+        opacity 0.8
+        top: 0
+        left: 0
+        transition: tDelay
+        width: 100%
+        height: 100%
+    //
+    &__body
+        padding: 40px 30px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        position relative
+    //
+    &__box-logo
+        cursor: pointer
+        display: block
+        flex-grow: 1
+        //
+        &_img
+            display: block
+            height: 44px
+            width: 100px
+            transition: tDelay
+        //
+        &:hover &_img
+            fill: color_3
+    //
+    &__brif-btn
+        display: block
+        flex-shrink: 0
+        font-size: 14px
+        color: color_2
+        text-transform: uppercase
+        cursor pointer
+        transition: tDelay
+        margin: 0 30px 0 0
+        //
+        &:hover
+            color: color_3
+        //
+        &::after
+        &::before
+            font-size: inherit
+            font-weight: 700
+            color: color_5
+        //
+        &::before
+            content: '['
+        //
+        &::after
+            content: ']'
+    //
+    &__lk-link
+        display: block
+        flex-shrink: 0
+        font-size: 14px
+        color: color_2
+        text-transform: uppercase
+        cursor pointer
+        transition: tDelay
+        margin: 0 30px 0 0
+        //
+        &:hover
+            color: color_3
+        //
+        &::after
+        &::before
+            font-size: inherit
+            font-weight: 700
+            color: color_5
+        //
+        &::before
+            content: '['
+        //
+        &::after
+            content: ']'
+    //
+    &__btn
+        flex-shrink: 0
+        width: 40px
+        height: 25px
+        cursor: pointer
+        position relative
+        // 
+        &_line 
+            position: absolute
+            height 5px
+            width: 100%
+            background: color_3
+            // 
+            &-N1
+                transition: 0.4s
+                top: 0
+                right 0
+            &-N2
+                transition: 0.4s
+                top: 10px
+                left 0
+            &-N3
+                transition: 0.4s
+                top: 20px
+                right: 0
+        //
+        &_cross &
+            &_line
+                &-N1
+                    animation: topLine 0.4s linear
+                    animation-fill-mode: forwards 
+                //
+                &-N2
+                    width: 0
+                //
+                &-N3
+                    animation: bottomLine 0.4s linear
+                    animation-fill-mode: forwards
+                // 
+        &_back &
+            &_line
+                &-N1
+                    animation: topLineBack 0.4s linear
+                    animation-fill-mode: forwards 
+                //
+                &-N3
+                    animation: bottomLineBack 0.4s linear
+                    animation-fill-mode: forwards
+            //
+        &_finaly &
+            &_line
+                &-N2
+                    width: 100%
+    //
+    &__scroll
+        position: absolute
+        top: 50%
+        left 50%
+        transform: translate(-50%, -50%)
+        width: 100px
+        height: 100px
+        opacity: 0
+        transition: tDelay
+        //
+        &-active
+            opacity: 1
+        //
+        &_body
+            width: 100%
+            height 100%
+            position relative
+        //
+        &_arrow
+            position: absolute
+            top: 5px
+            left 50%
+            transform: translateX(-50%)
+            height: 50%
+            width: auto
+            //
+            &-up
+                display: block
+                animation: arrowUp 0.8s linear infinite 
+        //
+        &_label
+            position: absolute
+            bottom: 10px
+            left: 50%
+            transform: translateX(-50%)
+            color: color_2
+            text-transform: uppercase
+            font-size: 16px
+            //
+            &::after
+            &::before
+                font-size: inherit
+                font-weight: 700
+                color: color_5
+            //
+            &::before
+                content: '['
+            //
+            &::after
+                content: ']'
+            //
+            &-up
+                display: block
+    // 
+    &__menu
+        position: fixed
+        top: 124px
+        left: 0
+        width: 100%
+        height: calc(100vh - 124px)
+        background-color: transparent
+        z-index: 200
+        display: none
+        //
+        &_overlay
+            position: absolute
+            width: 100%
+            height 100%
+            background: color_1
+            opacity 0.8
+        // 
+        &_center
+            position relative
+            width: 100%
+            height 100%
+            max-width: 1000px
+            margin: 0 auto
+            padding: 40px 40px 124px 40px
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            align-items: flex-start
+        //
+        &_nav-box
+            width: 100%
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            flex-grow: 1
+            //
+        &_item
+            font-size: 40px
+            font-weight: 500
+            color: color_6
+            margin: 0 0 25px 0
+            cursor: pointer
+            transition: tDelay
+            withoutHighlighting()
+            // 
+            &:last-child
+                margin: 0
+            //
+            &-active
+            &:hover
+                color: color_3      
+            //
+            &-phone
+                font-size: 28px
+                font-weight: 700
+            //
+            &-mobile
+                display: none
+            &-desctop
+                display: block
+            //
+        &_bottom
+            flex-shrink: 0
+            margin: 0 0 25px 0
+            width: 100%
+            display: flex
+            align-items: center
+            justify-content: space-between
+            //
+            & ^[1]_item
+                margin: 0
+            //
+            &-social
+                justify-content: flex-end
+                margin: 0
+        //
+        &_social 
+            display: flex
+            align-items: center
+            justify-content: flex-start
+            //
+            &_icon
+                width: 40px
+                height: 40px
+                border-radius: 20px
+                cursor: pointer
+                display: block
+                margin: 0 15px 0 0
+                transition: tDelay
+                background-color: transparent
+                background-size: 100%
+                background-repeat: no-repeat
+                background-position: center
+                //
+                &:last-child
+                    margin: 0
+                //
+                &-fb
+                    background-image: url(/images/icons/icon_fb_grey.svg)
+                    //
+                    &:hover
+                        background-image: url(/images/icons/icon_fb_yellow.svg)
+                //
+                &-inst
+                    background-image: url(/images/icons/icon_inst_grey.svg)
+                    //
+                    &:hover
+                        background-image: url(/images/icons/icon_inst_yellow.svg)
+                //
+                &-telegram
+                    background-image: url(/images/icons/icon_telegram.svg)
+                    //
+                    &:hover
+                        background-image: url(/images/icons/icon_telegram_yellow.svg)
+                //
+                &-wa
+                    background-image: url(/images/icons/icon_wa_grey.svg)
+                    //
+                    &:hover
+                        background-image: url(/images/icons/icon_wa_yellow.svg)
+
+// 
+// 
+// динамический цвет темы
+// светлая тема
+.app__light .header
+    &::before
+        background: color_2
+    // 
+    &__box-logo_img
+        fill: color_1
+    //
+    &__menu
+        background: color_1
+//
+// темная тема
+.app__dark .header
+    &::before
+        background: color_1
+    // 
+    &__box-logo_img
+            fill: color_2
+
+// 
+// 
+// 
+// media        
+@media screen and (min-width: 1000px)
+    .header__btn:hover .header__btn_line
+        width: 0 !important
+
+// 
+// 
+// 
+@media screen and (max-width: 1500px)
+    .header
+        &__body
+            padding: 20px
+        //
+        &__box-logo
+            &_img
+                height: 35.2px
+                width: 80px
+        //
+        &__btn
+            width: 35px
+            height: 20px
+            // 
+            &_line 
+                height 4px
+                // 
+                &-N1
+                    top: 0
+                &-N2
+                    top: 8px
+                &-N3
+                    top: 16px
+        //
+        &__scroll
+            width: 70px
+            height: 70px
+            //
+            &_label
+                bottom: 5px
+                font-size: 16px
+        // 
+        &__menu
+            top: 75.19px
+            height: calc(100% - 75.19px)
+            // 
+            &_center
+                padding: 20px 20px 75.19px 20px
+            //
+            &_item
+                font-size: 30px
+                margin: 0 0 20px 0
+                //
+                &-phone
+                    font-size: 25px
+                //
+            &_bottom
+                margin: 0 0 20px 0
+            //
+            &_social 
+                &_icon
+                    margin: 0 10px 0 0
+// 
+// 
+// 
+@media screen and (max-width: 1000px)
+    .header
+        &__body
+            padding: 15px
+        //
+        &__box-logo
+            &_img
+                height: 30.8px
+                width: 70px
+            &:hover &_img
+                fill: color_2
+        &__scroll
+            width: 50px
+            height: 50px
+            //
+            &_arrow
+                &-up
+                    display: none 
+            //
+            &_label
+                font-size: 10px
+                //
+                &-up
+                    display: none
+        //
+        &__menu
+            top: 60.8px
+            height: calc(100% - 60.8px)
+            // 
+            &_center
+                padding: 15px 15px 60.8px 15px
+            //
+            &_item
+                font-size: 25px
+                margin: 0 0 15px 0
+                //
+                &-phone
+                    font-size: 20px
+                //
+                &-mobile
+                    display: block !important
+                &-desctop
+                    display: none !important
+                //
+            &_bottom
+                margin: 0 0 15px 0
+            //
+            &_social 
+                &_icon
+                    margin: 0 10px 0 0
+                    width: 30px
+                    height: 30px
+// 
+// 
+// 
+@media screen and (max-width: 750px)
+    .header
+        &__body
+            padding: 10px
+        //
+        &__box-logo
+            &_img
+                height: 22px
+                width: 50px
+        //
+        //
+        &__brif-btn
+            font-size: 10px
+            margin: 0 10px 0 0
+        //
+        &__lk-link
+            flex-shrink: 0
+            font-size: 0
+            color: transparent
+            margin: 0 10px 0 0
+            width: 20px
+            height: 20px
+            background-size: 100% 100%
+            background-repeat: no-repeat
+            background-position: center
+            background-image: url(/images/icons/lk.svg)
+        //
+        &__scroll
+            width: 40px
+            height: 40px
+            //
+            &_label
+                font-size: 8px
+        //
+        &__menu
+            top: 42px
+            height: calc(100% - 42px)
+            // 
+            &_center
+                padding: 10px 10px 42px 10px
+                display: block
+            //
+            &_nav-box
+                margin: 0 0 15px 0
+            //
+            &_item
+                font-size: 25px
+                margin: 0 0 15px 0
+                display: block
+                //
+                &-phone
+                    font-size: 20px
+            //
+            &_bottom
+                margin: 0 0 15px 0
+                display: block
+                //
+                & ^[1]_item
+                    margin: 0 0 15px 0
+// 
+// 
+// 
+@keyframes topLine
+	0%
+		top: 0
+		right: 0
+	50%
+		right: 50%
+		top: 100%
+		transform: translate(50%, 0)
+	100%
+		right: 50%
+		top: 50%
+		transform: translate(50%, -50%) rotate(45deg)
+//
+@keyframes bottomLine
+	0%
+		top: 100%
+		right: 0
+	50%
+		right: 50%
+		top: 0
+		transform: translate(50%, 0)
+	100%
+		right: 50%
+		top: 50%
+		transform: translate(50%, -50%) rotate(-45deg)
+//
+//
+//
+@keyframes topLineBack
+	0%
+		right: 50%
+		top: 50%
+		transform: translate(50%, -50%) rotate(45deg)
+	50%
+		right: 50%
+		top: 100%
+		transform: translate(50%, 0) rotate(0deg)
+	100%
+		right: 0
+		top: 0
+		transform: translate(0, 0)
+//
+@keyframes bottomLineBack
+	0%
+		right: 50%
+		top: 50%
+		transform: translate(50%, -50%) rotate(-45deg)
+	50%
+		right: 50%
+		top: 0
+		transform: translate(50%, 0) rotate(0deg)
+	100%
+		right: 0
+		bottom: 0
+		transform: translate(0, 0)
+//
+//
+//
+@keyframes arrowUp 
+    0%
+        top: 5px
+    50%
+        top: 0
+    100%
+        top: 5px
+//
+@keyframes arrowDown 
+    0%
+        top: 0
+    50%
+        top: 5px
+    100%
+        top: 0

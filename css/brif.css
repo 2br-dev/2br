@@ -1,0 +1,324 @@
+.b__overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.8;
+  z-index: 10000;
+  display: none;
+}
+.b__form {
+  display: none;
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  width: 100%;
+  max-width: 600px;
+  padding: 50px 0;
+  z-index: 10001;
+  height: calc(100vh - 10px);
+  overflow-x: scroll;
+}
+.b__close {
+  outline: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 40px;
+  width: 40px;
+  background: #f2cc2f;
+  border: 0;
+  background-position: center;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-image: url("/images/icons/icon_cross.svg");
+  cursor: pointer;
+}
+.b__title-box {
+  padding: 0 50px;
+}
+.b__title {
+  font-size: 24px;
+  margin: 0 0 20px 0;
+}
+.b__title-2 {
+  margin: 0 0 20px 0;
+  font-size: 14px;
+}
+.b__title-2 span {
+  color: #f2cc2f;
+  font-size: inherit;
+}
+.b__box {
+  background: transparent;
+  padding: 10px 50px;
+}
+.b__box-error {
+  background: rgba(242,204,47,0.3);
+}
+.b__box-submit {
+  margin: 20px 0 0 0;
+  display: flex;
+  padding: 0 20px;
+  align-items: center;
+  justify-content: center;
+}
+.b__label {
+  display: block;
+  margin: 0 0 5px 0;
+  font-size: 18px;
+}
+.b__label span {
+  color: #f2cc2f;
+  font-size: inherit;
+}
+.b__label-2 {
+  display: block;
+  margin: 0 0 20px 0;
+  font-size: 18px;
+}
+.b__label-2 span {
+  color: #f2cc2f;
+  font-size: inherit;
+}
+.b__textarea {
+  display: block;
+  width: 100%;
+  height: 100px;
+  overflow: auto;
+  background: transparent;
+  font-size: 14px;
+  padding: 5px;
+  resize: none;
+  outline: none;
+  border: 1px solid #000;
+}
+.b__textarea-2 {
+  display: block;
+  width: 100%;
+  height: 50px;
+  overflow: auto;
+  margin: 20px 0 0 0;
+  background: transparent;
+  font-size: 14px;
+  padding: 5px;
+  resize: none;
+  outline: none;
+  border: 1px solid #000;
+}
+.b__check {
+  display: none;
+}
+.b__check:checked + .b__ckeck_label::before {
+  background: #f2cc2f;
+  border-color: #f2cc2f;
+  background-image: url("/images/icons/icon_checked.svg");
+}
+.b__ckeck_label {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: block;
+  position: relative;
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 0 0 0 25px;
+}
+.b__ckeck_label::before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #000;
+  cursor: pointer;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-position: center;
+  background-size: 8px 8px;
+  background-repeat: no-repeat;
+}
+.b__input-hide {
+  display: none;
+  opacity: 0;
+  width: 100%;
+  padding: 5px;
+  font-size: 14px;
+  background: transparent;
+  border: 1px solid #000;
+  margin: 0 0 10px 0;
+  outline: none;
+}
+.b__input-hide-visible {
+  display: block;
+  opacity: 1;
+}
+.b__input {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  font-size: 14px;
+  background: transparent;
+  border: 1px solid #000;
+  outline: none;
+}
+.b__btn-submit {
+  padding: 10px 30px;
+  background: #f2cc2f;
+  border: 2px solid #f2cc2f;
+  cursor: pointer;
+  transition: 0.4s;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #000;
+  outline: none;
+}
+.b__btn-submit:hover {
+  background: transparent;
+}
+@media screen and (max-width: 750px) {
+  .b__form {
+    padding: 20px 0;
+  }
+  .b__close {
+    height: 30px;
+    width: 30px;
+    background-size: 15px 15px;
+  }
+  .b__title-box {
+    padding: 0 20px;
+  }
+  .b__title {
+    font-size: 20px;
+  }
+  .b__box {
+    padding: 10px 20px;
+  }
+  .b__label {
+    font-size: 16px;
+  }
+  .b__label-2 {
+    font-size: 16px;
+  }
+  .b__ckeck_label {
+    font-size: 16px;
+  }
+  .b__btn-submit {
+    width: 100%;
+    text-align: center;
+  }
+}
+.p__form {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 100%;
+  max-width: 600px;
+  padding: 50px 0;
+  z-index: 10001;
+}
+.p__close {
+  outline: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 40px;
+  width: 40px;
+  background: #f2cc2f;
+  border: 0;
+  background-position: center;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-image: url("/images/icons/icon_cross.svg");
+  cursor: pointer;
+}
+.p__box {
+  padding: 10px 50px;
+  background: transparent;
+}
+.p__box-error {
+  background: rgba(242,204,47,0.3);
+}
+.p__title {
+  font-size: 24px;
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+.p__code {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+}
+.p__text {
+  font-size: 18px;
+  margin: 0 0 5px 0;
+  text-align: center;
+}
+.p__text span {
+  font-size: inherit;
+  font-weight: 700;
+}
+.p__input {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  font-size: 18px;
+  margin: 0 0 10px 0;
+  border: 1px solid #000;
+  outline: none;
+}
+.p__submit {
+  padding: 10px 30px;
+  width: 100%;
+  text-align: center;
+  background: #f2cc2f;
+  border: 2px solid #f2cc2f;
+  cursor: pointer;
+  transition: 0.4s;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #000;
+  outline: none;
+}
+.p__submit:hover {
+  background: transparent;
+}
+@media screen and (max-width: 750px) {
+  .p__form {
+    padding: 20px 0;
+  }
+  .p__close {
+    height: 30px;
+    width: 30px;
+    background-size: 15px 15px;
+  }
+  .p__box {
+    padding: 10px 20px;
+  }
+  .p__title {
+    font-size: 20px;
+  }
+  .p__code {
+    font-size: 25px;
+  }
+  .p__text {
+    font-size: 16px;
+  }
+  .p__input {
+    font-size: 16px;
+  }
+  .p__submit {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,131 @@
+.main {
+  background-color: #fff;
+}
+.banner {
+  width: 100%;
+}
+.banner__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.body {
+  padding: 0 30px;
+}
+.title {
+  font-size: 170px;
+  color: #f2cc2f;
+  font-weight: 700;
+}
+.box-flex {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+.box-flex__col {
+  width: 50%;
+  flex-shrink: 0;
+  display: flex;
+}
+.box-flex__col_box-label {
+  flex-shrink: 0;
+}
+.box-flex__col_label {
+  display: block;
+  width: 100%;
+  max-width: 125px;
+  height: auto;
+}
+.box-flex__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.box-flex__content_list {
+  width: 100%;
+  padding: 0 20px;
+}
+.box-flex__content_text {
+  font-size: 18px;
+  color: #000;
+  margin: 0 0 10px 0;
+}
+.box-flex__content_link {
+  font-size: 18px;
+  color: #000;
+  padding: 0 20px;
+}
+.box-flex__content_link a {
+  font-size: inherit;
+}
+.box-flex__content_link a:hover {
+  text-decoration: underline;
+}
+@media screen and (max-width: 1500px) {
+  .body {
+    padding: 0 20px;
+  }
+  .title {
+    font-size: 110px;
+  }
+  .box-flex {
+    padding: 50px 0;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .body {
+    padding: 0 15px;
+  }
+  .title {
+    font-size: 100px;
+  }
+  .box-flex {
+    padding: 30px 0;
+  }
+  .box-flex__col_label {
+    max-width: 90px;
+  }
+  .box-flex__content_list {
+    padding: 0 15px;
+  }
+  .box-flex__content_link {
+    padding: 0 15px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .body {
+    padding: 0 10px;
+  }
+  .title {
+    font-size: 50px;
+  }
+  .box-flex {
+    flex-direction: column;
+    padding: 40px 0;
+  }
+  .box-flex__col {
+    width: 100%;
+    margin: 0 0 40px 0;
+  }
+  .box-flex__col:last-child {
+    margin: 0;
+  }
+  .box-flex__col_box-label {
+    max-width: 50px;
+  }
+  .box-flex__label {
+    max-width: 50px;
+  }
+  .box-flex__content_list {
+    padding: 0 20px;
+  }
+  .box-flex__content_text {
+    font-size: 14px;
+  }
+  .box-flex__content_link {
+    font-size: 14px;
+    padding: 0 20px;
+  }
+}

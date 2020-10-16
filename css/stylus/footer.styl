@@ -1,0 +1,138 @@
+@import './props.styl'
+//
+//
+//
+.footer
+    border-top: 3px solid color_5
+    //
+    &__body
+        padding: 20px 30px
+        display: flex
+        align-items: flex-start
+    //
+    &__box
+        margin: 0 60px 0 0
+        flex-shrink: 0
+    //
+    &__text
+        font-size: 16px
+        font-weight: 300
+    //
+    &__link
+        display: block
+        font-size: 16px
+        font-weight: 300
+        cursor: pointer
+        //
+        &:hover
+            text-decoration: underline
+            -webkit-text-decoration-color: color_3
+            text-decoration-color: color_3
+    //
+    &__social 
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        align-self: center
+        flex-grow: 1
+        //
+        &_icon
+            width: 40px
+            height: 40px
+            border-radius: 20px
+            cursor: pointer
+            display: block
+            margin: 0 20px 0 0
+            transition: tDelay
+            background-color: transparent
+            background-size: 100%
+            background-repeat: no-repeat
+            background-position: center
+            //
+            &:last-child
+                margin: 0
+            //
+            &-fb
+                background-image: url(/images/icons/icon_fb_yellow.svg)
+                //
+                &:hover
+                    background-image: url(/images/icons/icon_fb_grey.svg)
+            //
+            &-inst
+                background-image: url(/images/icons/icon_inst_yellow.svg)
+                //
+                &:hover
+                    background-image: url(/images/icons/icon_inst_grey.svg)
+            //
+            &-telegram
+                background-image: url(/images/icons/icon_telegram_yellow.svg)
+                //
+                &:hover
+                    background-image: url(/images/icons/icon_telegram.svg)
+            //
+            &-wa
+                background-image: url(/images/icons/icon_wa_yellow.svg)
+                //
+                &:hover
+                    background-image: url(/images/icons/icon_wa_grey.svg)
+// 
+// 
+// 
+@media screen and (max-width: 1500px) 
+    .footer
+        &__body
+            padding: 20px
+        //
+        &__box
+            margin: 0 40px 0 0
+        //
+        &__text
+            font-size: 16px
+        //
+        &__link
+            font-size: 16px
+        //
+        &__social 
+            &_icon
+                width: 40px
+                height: 40px
+                margin: 0 10px 0 0
+// 
+// 
+// 
+@media screen and (max-width: 1000px) 
+    .footer
+        &__body
+            padding: 15px
+        //
+        &__box
+            margin: 0 30px 0 0
+        //
+        &__text
+            font-size: 16px
+        //
+        &__link
+            font-size: 16px
+        //
+        &__social 
+            &_icon
+                width: 35px
+                height: 35px
+// 
+// 
+// 
+@media screen and (max-width: 750px) 
+    .footer
+        &__body
+            padding: 10px
+        //
+        &__box
+            display: none
+        //
+        &__social 
+            justify-content: space-around
+            //
+            &_icon
+                width: 30px
+                height: 30px
+                margin: 0

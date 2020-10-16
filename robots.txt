@@ -1,0 +1,16 @@
+User-agent: *
+Disallow: /*?
+Disallow: /fonts/
+Disallow: /img/
+Disallow: /*?utm_source
+Disallow: /cp
+Sitemap: https://2-br.ru/sitemap.xml
+
+User-agent: Yandex
+Disallow: /*?
+Disallow: /fonts/
+Disallow: /img/
+Disallow: /*?utm_source
+Disallow: /cp
+Host: https://2-br.ru
+Sitemap: https://2-br.ru/sitemap.xml

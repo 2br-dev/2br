@@ -1,0 +1,302 @@
+@import './props.styl'
+//
+//
+//
+.main
+    background-color: color_2
+//
+.banner
+    width: 100%
+    //
+    &__img
+        display: block
+        width: 100%
+        height: auto
+        withoutHighlighting()
+// 
+.body
+    padding: 0 30px
+//
+.title 
+    font-size: 170px
+    color: color_1
+    font-weight: 700
+//
+//
+//
+@media screen and (max-width: 1500px) 
+    .body
+        padding: 0 20px
+    //
+    .title 
+        font-size: 110px  
+    //  
+//
+//
+//
+@media screen and (max-width: 1000px) 
+    .body
+        padding: 0 15px
+    //
+    .title 
+        font-size: 100px
+    //
+// 
+// 
+// 
+@media screen and (max-width: 750px) 
+    .body
+        padding: 0 10px
+    //
+    .title 
+        font-size: 50px
+    //
+// 
+// 
+// 
+.box
+    padding: 100px 0
+//
+.slider-section 
+    width: 100%
+    display: flex
+    justify-content: center
+    overflow hidden
+//
+.slider
+    flex-shrink: 0
+    width: 150%
+    //
+    &__slide
+        &_wrap
+            width: 100%
+            padding: 0 50px
+        //
+        &_overlay
+            position relative
+            //
+            &::after
+                content: ''
+                position: absolute
+                top: 0
+                left: 0
+                background: color_1
+                width: 100%
+                height 100%
+                opacity: 0.8
+                transition: tDelay
+        // 
+        &_img
+            display: block
+            width: 100%
+            height auto
+//
+.slick-center .slider__slide_overlay::after
+    opacity : 0
+// 
+// 
+// 
+.slick-arrow
+    outline: none
+    position: absolute
+    top: 0
+    height 100%
+    width: 100px
+    border: 0
+    background: transparent
+    background-repeat: no-repeat
+    background-size: 50px auto
+    background-image: url(/images/icons/icon_line.svg)
+    cursor pointer
+    color: transparent
+    font-size: 0
+    z-index 1
+    padding: 0
+//
+.slick-prev
+    background-position: left center
+    left: calc(100% / 6)
+//
+.slick-next
+    background-position: right center
+    right: calc(100% / 6)
+//
+//
+//
+@media screen and (max-width: 1500px) 
+    .box
+        padding: 50px 0
+    //
+    .slider
+        //
+        &__slide
+            &_wrap
+                padding: 0 25px
+    // 
+    .slick-arrow
+        width: 50px
+//
+//
+//
+@media screen and (max-width: 1000px) 
+    .box
+        padding: 30px 0
+    //
+    .slider
+        width: 100%
+        //
+        &__slide
+            &_wrap
+                padding: 0 
+            //
+            &_overlay
+                &::after
+                    opacity: 0
+    // 
+    .slick-arrow
+        width: 30px
+        background-size: 100% auto
+        background-image: url(/images/icons/icon_arrow_right.svg)
+    //
+    .slick-prev
+        transform: rotate(180deg)
+        background-position: center
+        left: 0
+    //
+    .slick-next
+        background-position: center
+        right: 0
+// 
+// 
+// 
+@media screen and (max-width: 750px) 
+    .body
+        padding: 0 10px
+    //
+    .title 
+        font-size: 50px
+    //
+// 
+// 
+// 
+.content 
+    max-width: 1200px
+    width: 100%
+    margin: 0 auto
+    display: flex
+    padding: 0 0 100px 0
+    min-height: 700px
+    // 
+    &__left
+        flex-shrink: 0
+        width: 100px
+        background-repeat: no-repeat
+        background-size: contain 
+        background-position: 0 0
+        background-image: url(/images/brunch_label.png)
+        margin: 0 100px 0 0
+    //
+    &__right
+        flex-grow: 1
+// 
+.row
+    margin: 0 0 50px 0
+    //
+    &:last-child
+        margin: 0
+    //
+    &__title
+        width: 100%
+        max-width: 600px
+        display: flex
+        justify-content: space-between
+        margin: 0 0 30px 0
+        //
+        &_text
+            font-size: 24px
+            font-weight: 700
+            color: color_1
+    //
+    &__text
+        font-size: 18px
+        color: color_1
+        margin: 0 0 10px 0
+        //
+        & span 
+            font-size: inherit
+//
+//
+//
+@media screen and (max-width: 1500px) 
+    .content 
+        padding: 0 0 50px 0
+        min-height: 500px
+        // 
+        &__left
+            width: 80px
+            margin: 0 50px 0 0
+    // 
+    .row
+        margin: 0 0 50px 0
+        //
+        &:last-child
+            margin: 0
+        //
+        &__title
+            &_text
+                font-size: 25px
+        //
+        &__text
+            font-size: 25px
+
+//
+//
+//
+@media screen and (max-width: 1000px) 
+    .content 
+        min-height: 400px
+        padding: 0 0 30px 0
+        // 
+        &__left
+            width: 50px
+            margin: 0 15px 0 0
+    // 
+    .row
+        margin: 0 0 30px 0
+        //
+        &__title
+            max-width: initial
+            margin: 0 0 20px 0
+            //
+            &_text
+                font-size: 20px
+        //
+        &__text
+            font-size: 20px
+    
+// 
+// 
+// 
+@media screen and (max-width: 750px) 
+        .content 
+            padding: 0 0 20px 0
+            min-height: 300px
+            // 
+            &__left
+                width: 30px
+                margin: 0 10px 0 0
+        // 
+        .row
+            margin: 0 0 15px 0
+            //
+            &__title
+                margin: 0 0 10px 0
+                //
+                &_text
+                    font-size: 14px
+            //
+            &__text
+                font-size: 14px
+// 
+// 
+// 

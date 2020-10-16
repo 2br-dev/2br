@@ -1,0 +1,173 @@
+.contacts {
+  height: 100vh;
+  position: relative;
+  background: #fff;
+  transition: 1s;
+  overflow: hidden;
+  margin: -100vh 0 0 0;
+}
+.contacts-active {
+  margin: 0;
+}
+.contacts__body {
+  height: 100%;
+}
+.contacts__map {
+  width: 100%;
+  height: 40%;
+  overflow: hidden;
+}
+.contacts__map_iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.contacts__box {
+  height: 60%;
+  padding: 0 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+}
+.contacts__box_center {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-grow: 1;
+}
+.contacts__row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 0 0 20px 0;
+}
+.contacts__row:last-child {
+  margin: 0;
+}
+.contacts__row_title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+}
+.contacts__row_text {
+  width: 50%;
+  font-size: 20px;
+  color: #000;
+}
+.contacts__row_link {
+  font-size: inherit;
+  color: #f2cc2f;
+  cursor: pointer;
+}
+.contacts__title {
+  flex-shrink: 0;
+  font-size: 170px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 20px 0;
+}
+@media screen and (max-width: 1500px) {
+  .contacts__box {
+    padding: 0 20px 20px 20px;
+  }
+  .contacts__row_title {
+    font-size: 16px;
+  }
+  .contacts__row_text {
+    font-size: 16px;
+  }
+  .contacts__title {
+    font-size: 110px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .contacts__box {
+    padding: 0 15px 15px 15px;
+  }
+  .contacts__title {
+    font-size: 100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contacts__box {
+    padding: 0 10px 10px 10px;
+  }
+  .contacts__row {
+    margin: 0 0 10px 0;
+  }
+  .contacts__row-hidden {
+    display: none;
+  }
+  .contacts__row_title {
+    font-size: 14px;
+  }
+  .contacts__row_text {
+    font-size: 14px;
+  }
+  .contacts__title {
+    font-size: 50px;
+  }
+}
+@-moz-keyframes showContacts {
+  to {
+    height: 0;
+  }
+  from {
+    height: 100vh;
+  }
+}
+@-webkit-keyframes showContacts {
+  to {
+    height: 0;
+  }
+  from {
+    height: 100vh;
+  }
+}
+@-o-keyframes showContacts {
+  to {
+    height: 0;
+  }
+  from {
+    height: 100vh;
+  }
+}
+@keyframes showContacts {
+  to {
+    height: 0;
+  }
+  from {
+    height: 100vh;
+  }
+}
+@-moz-keyframes hideContacts {
+  to {
+    height: 100vh;
+  }
+  from {
+    height: 0;
+  }
+}
+@-webkit-keyframes hideContacts {
+  to {
+    height: 100vh;
+  }
+  from {
+    height: 0;
+  }
+}
+@-o-keyframes hideContacts {
+  to {
+    height: 100vh;
+  }
+  from {
+    height: 0;
+  }
+}
+@keyframes hideContacts {
+  to {
+    height: 100vh;
+  }
+  from {
+    height: 0;
+  }
+}

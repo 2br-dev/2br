@@ -1,0 +1,134 @@
+@import './props.styl'
+//
+//
+//
+.contacts 
+    height: 100vh
+    position: relative
+    background: #fff
+    transition: 1s
+    overflow hidden
+    margin: -100vh 0 0 0
+    //
+    &-active
+        margin: 0
+    //
+    &__body
+        height: 100%
+    //
+    &__map
+        width: 100%
+        height: 40%
+        overflow hidden
+        //
+        &_iframe
+            width: 100%
+            height 100%
+            border: 0
+    //
+    &__box
+        height 60%
+        padding: 0 30px 30px 30px;
+        display: flex
+        flex-direction: column
+        //
+        &_center
+            width: 100%
+            max-width 1000px
+            margin: 0 auto
+            flex-grow: 1
+        //
+    &__row
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+        margin: 0 0 20px 0
+        //
+        &:last-child
+            margin: 0
+        //
+        &_title
+            font-size: 20px
+            font-weight: 700
+            color: color_1
+        //
+        &_text
+            width: 50%
+            font-size: 20px
+            color: color_1
+        //
+        &_link
+            font-size: inherit
+            color: color_3
+            cursor pointer
+    //
+    &__title
+        flex-shrink: 0
+        font-size: 170px
+        font-weight: 700
+        color: color_1
+        margin: 0 0 20px 0
+//
+//
+// 
+@media screen and (max-width: 1500px)
+    .contacts 
+        &__box
+            padding: 0 20px 20px 20px;
+            //
+        &__row
+            &_title
+                font-size: 16px
+            //
+            &_text
+                font-size: 16px
+        //
+        &__title
+            font-size: 110px
+// 
+// 
+// 
+@media screen and (max-width: 1000px)
+    .contacts 
+        &__box
+            padding: 0 15px 15px 15px;
+        //
+        &__title
+            font-size: 100px
+// 
+// 
+// 
+@media screen and (max-width: 768px)
+    .contacts 
+        &__box
+            padding: 0 10px 10px 10px;
+        //
+        &__row
+            &-hidden
+                display: none
+            //
+            margin: 0 0 10px 0
+            //
+            &_title
+                font-size: 14px
+            //
+            &_text
+                font-size: 14px
+        //
+        &__title
+            font-size: 50px
+// 
+// 
+// 
+// 
+@keyframes showContacts 
+    to
+        height: 0
+    from
+        height: 100vh
+// 
+@keyframes hideContacts 
+    to
+        height: 100vh
+    from
+        height: 0

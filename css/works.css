@@ -1,0 +1,232 @@
+.main {
+  background-color: #fff;
+}
+.banner {
+  width: 100%;
+}
+.banner__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.body {
+  padding: 0 30px;
+}
+.body__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.body__filter {
+  padding: 10px 0;
+}
+.body__filter_link {
+  display: block;
+  cursor: pointer;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+  color: #939393;
+}
+.body__filter_link:hover,
+.body__filter_link-active {
+  color: #000;
+}
+.body__filter_link:last-child {
+  margin: 0;
+}
+.body__filter_link::before {
+  content: '/';
+  color: #f2cc2f;
+  margin: 0 5px 0 0;
+}
+.title {
+  font-size: 170px;
+  color: #000;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+@media screen and (max-width: 1500px) {
+  .body {
+    padding: 0 20px;
+  }
+  .title {
+    font-size: 110px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .body {
+    padding: 0 15px;
+  }
+  .body__filter {
+    padding: 10px 0;
+  }
+  .body__filter_link {
+    font-size: 16px;
+  }
+  .title {
+    font-size: 100px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .body {
+    padding: 0 10px;
+  }
+  .body__row {
+    display: block;
+  }
+  .body__filter_link {
+    font-size: 14px;
+  }
+  .title {
+    font-size: 50px;
+  }
+}
+.projects {
+  padding: 100px 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+}
+.projects__item {
+  cursor: pointer;
+  position: relative;
+  width: calc(50% - 20px);
+  margin: 0 0 40px 0;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.projects__item:hover .projects__img {
+  transform: scale(1) !important;
+}
+.projects__item:hover .projects__mask {
+  opacity: 0.8;
+}
+.projects__item-stub {
+  background: #000;
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.projects__item-stub_title {
+  font-size: 24px;
+  font-weight: 300;
+  color: #fff;
+}
+.projects__item-stub_title::after,
+.projects__item-stub_title::before {
+  font-size: inherit;
+  font-weight: 700;
+  color: #ecd648;
+}
+.projects__item-stub_title::before {
+  content: '[';
+}
+.projects__item-stub_title::after {
+  content: ']';
+}
+.projects__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.4s;
+  transform: scale(1.1);
+}
+.projects__mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0;
+  transition: 0.4s;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  align-items: center;
+}
+.projects__mask_convas {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.projects__mask_text {
+  position: absolute;
+  max-width: 60%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 300;
+  color: #fff;
+}
+.projects__mask_text::after,
+.projects__mask_text::before {
+  font-size: inherit;
+  font-weight: 700;
+  color: #ecd648;
+}
+.projects__mask_text::before {
+  content: '[';
+}
+.projects__mask_text::after {
+  content: ']';
+}
+@media screen and (max-width: 1500px) {
+  .projects {
+    padding: 50px 0 0 0;
+  }
+  .projects__item {
+    width: calc(50% - 10px);
+    margin: 0 0 20px 0;
+  }
+  .projects__mask_text {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .projects {
+    padding: 30px 0 0 0;
+  }
+  .projects__item {
+    width: calc(50% - 7.5px);
+    margin: 0 0 15px 0;
+  }
+  .projects__img {
+    transform: scale(1);
+  }
+  .projects__mask {
+    display: block;
+    opacity: 0.8 !important;
+  }
+  .projects__mask_text {
+    font-size: 16px;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+  }
+}
+@media screen and (max-width: 750px) {
+  .projects {
+    padding: 20px 0 0 0;
+  }
+  .projects__item {
+    width: 100%;
+    margin: 0 0 10px 0;
+  }
+  .projects__item-stub {
+    display: none;
+  }
+}

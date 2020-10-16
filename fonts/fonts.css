@@ -1,0 +1,72 @@
+/* normal */
+@font-face {
+    font-family: 'Formular';
+    src: url(/fonts/Formular/Formular_300.ttf) format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Formular';
+    src: url(/fonts/Formular/Formular_400.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Formular';
+    src: url(/fonts/Formular/Formular_500.ttf) format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Formular';
+    src: url(/fonts/Formular/Formular_700.ttf) format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Formular';
+    src: url(/fonts/Formular/Formular_900_i.ttf) format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+/* italic */
+@font-face {
+    font-family: 'Formular';
+    src: url(/fonts/Formular/Formular_300_i.ttf) format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Formular';
+    src: url(/fonts/Formular/Formular_400_i.ttf) format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Formular';
+    src: url(/fonts/Formular/Formular_500_i.ttf) format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Formular';
+    src: url(/fonts/Formular/Formular_700_i.ttf) format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Formular';
+    src: url(/fonts/Formular/Formular_900_i.ttf) format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+/*  */
+/*  */
+/*  */
+* {
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    color: #000;
+    font-family: 'Formular', sans-serif;
+}

@@ -1,0 +1,133 @@
+.main {
+  background-color: #fff;
+}
+.banner {
+  width: 100%;
+}
+.banner__iframe {
+  display: block;
+  width: 100%;
+  height: 60vh;
+  border: 0;
+}
+.body {
+  padding: 0 30px;
+}
+.title {
+  font-size: 170px;
+  color: #000;
+  font-weight: 700;
+}
+@media screen and (max-width: 1500px) {
+  .body {
+    padding: 0 20px;
+  }
+  .title {
+    font-size: 110px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .body {
+    padding: 0 15px;
+  }
+  .title {
+    font-size: 100px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .body {
+    padding: 0 10px;
+  }
+  .title {
+    font-size: 50px;
+  }
+}
+.contact__box_center {
+  padding: 100px 0;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-grow: 1;
+}
+.contact__row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 0 0 20px 0;
+  height: 75px;
+}
+.contact__row:last-child {
+  margin: 0;
+}
+.contact__row_title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+}
+.contact__row_text {
+  width: 50%;
+  font-size: 20px;
+  color: #000;
+}
+.contact__row_link {
+  font-size: inherit;
+  color: #f2cc2f;
+  cursor: pointer;
+}
+.contact__title {
+  flex-shrink: 0;
+  font-size: 170px;
+  font-weight: 700;
+  color: #000;
+}
+@media screen and (max-width: 1500px) {
+  .contact__box {
+    padding: 20px;
+  }
+  .contact__box_center {
+    padding: 50px 0;
+  }
+  .contact__row_title {
+    font-size: 16px;
+  }
+  .contact__row_text {
+    font-size: 16px;
+  }
+  .contact__title {
+    font-size: 110px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .contact__box {
+    padding: 15px;
+  }
+  .contact__box_center {
+    padding: 30px 0;
+  }
+  .contact__title {
+    font-size: 100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contact__box {
+    padding: 10px;
+  }
+  .contact__box_center {
+    padding: 20px 0;
+  }
+  .contact__row {
+    margin: 0 0 10px 0;
+  }
+  .contact__row-hidden {
+    display: none;
+  }
+  .contact__row_title {
+    font-size: 14px;
+  }
+  .contact__row_text {
+    font-size: 14px;
+  }
+  .contact__title {
+    font-size: 50px;
+  }
+}

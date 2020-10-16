@@ -1,0 +1,154 @@
+@import './props.styl'
+//
+//
+//
+.main
+    background-color: color_2
+//
+.banner
+    width: 100%
+    //
+    &__iframe
+        display: block
+        width: 100%
+        height: 60vh
+        border: 0
+// 
+.body
+    padding: 0 30px
+//
+.title 
+    font-size: 170px
+    color: color_1
+    font-weight: 700
+//
+//
+//
+@media screen and (max-width: 1500px) 
+    .body
+        padding: 0 20px
+    //
+    .title 
+        font-size: 110px  
+    //  
+//
+//
+//
+@media screen and (max-width: 1000px) 
+    .body
+        padding: 0 15px
+    //
+    .title 
+        font-size: 100px
+    //
+// 
+// 
+// 
+@media screen and (max-width: 750px) 
+    .body
+        padding: 0 10px
+    //
+    .title 
+        font-size: 50px
+    //
+// 
+// 
+// 
+.contact 
+    &__box
+        //
+        &_center
+            padding: 100px 0
+            width: 100%
+            max-width 1000px
+            margin: 0 auto
+            flex-grow: 1
+        //
+    &__row
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+        margin: 0 0 20px 0
+        height 75px
+        //
+        &:last-child
+            margin: 0
+        //
+        &_title
+            font-size: 20px
+            font-weight: 700
+            color: color_1
+        //
+        &_text
+            width: 50%
+            font-size: 20px
+            color: color_1
+        //
+        &_link
+            font-size: inherit
+            color: color_3
+            cursor pointer
+    //
+    &__title
+        flex-shrink: 0
+        font-size: 170px
+        font-weight: 700
+        color: color_1
+//
+//
+// 
+@media screen and (max-width: 1500px)
+    .contact 
+        &__box
+            padding: 20px;
+            //
+            &_center
+                padding: 50px 0
+            //
+        &__row
+            &_title
+                font-size: 16px
+            //
+            &_text
+                font-size: 16px
+        //
+        &__title
+            font-size: 110px
+// 
+// 
+// 
+@media screen and (max-width: 1000px)
+    .contact 
+        &__box
+            padding: 15px;
+            //
+            &_center
+                padding: 30px 0
+        //
+        &__title
+            font-size: 100px
+// 
+// 
+// 
+@media screen and (max-width: 768px)
+    .contact 
+        &__box
+            padding: 10px;
+            //
+            &_center
+                padding: 20px 0
+        //
+        &__row
+            &-hidden
+                display: none
+            //
+            margin: 0 0 10px 0
+            //
+            &_title
+                font-size: 14px
+            //
+            &_text
+                font-size: 14px
+        //
+        &__title
+            font-size: 50px
