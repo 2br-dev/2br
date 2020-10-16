@@ -87,6 +87,7 @@ class homePageModule extends Module
 
     public function blockMethod()
     {
+        // exit(__($this->getProjectList()));
         return [
             'template' => 'block',
             'projectList' => $this->getProjectList()
@@ -96,7 +97,7 @@ class homePageModule extends Module
     private function getProjectList() {
         $result = [];
         // получить все видимые проекты
-        $response = Q("SELECT id, label, preview, content FROM `db_mdd_projects` WHERE visible = 1 ORDER BY `created` DESC LIMIT 8", [])->all();
+        $response = Q("SELECT id, label, preview, content, preview_video FROM `db_mdd_projects` WHERE visible = 1 ORDER BY `ord` DESC LIMIT 9", [])->all();
         if(empty($response)) {
             return $result;
         }
@@ -108,12 +109,24 @@ class homePageModule extends Module
             $result[$key]['content'] = $row['content'];
             // парсинг превью
             $preview = $file->getFilesByGroup($row['preview'], ['original'], ['alt', 'file'], true);
+            $preview_video = $file->getFilesByGroup($row['preview_video'], ['original'], ['file']);
+
+            
+
             if(!empty($preview)) {
                 $preview = array_shift($preview);
                 // 
                 $result[$key]['preview'] = [
                     'alt' => $preview['original']['alt'],
-                    'src' => str_ireplace("\\", "/", $preview['original']['file'])
+                    'src' => str_ireplace("\\", "/", $preview['original']['file']),
+                    'type' => 'image'
+                ];
+            }else if(!empty($preview_video)){
+                $preview_video = array_shift($preview_video);
+                // 
+                $result[$key]['preview'] = [
+                    'src' => str_ireplace("\\", "/", $preview_video['file']),
+                    'type' => 'video'
                 ];
             }
         }   

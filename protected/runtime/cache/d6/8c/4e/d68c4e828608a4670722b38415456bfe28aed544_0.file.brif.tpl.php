@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.31, created on 2020-10-16 12:11:12
+/* Smarty version 3.1.31, created on 2020-10-16 15:06:50
   from "C:\localserver\OpenServer\domains\2br.local\protected\themes\base\smarty\components\brif.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5f8963b0c498d6_11802514',
+  'unifunc' => 'content_5f898cda304994_43464317',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f8963b0c498d6_11802514 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f898cda304994_43464317 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <link rel="stylesheet" href="/css/brif.css">
 <!--  -->

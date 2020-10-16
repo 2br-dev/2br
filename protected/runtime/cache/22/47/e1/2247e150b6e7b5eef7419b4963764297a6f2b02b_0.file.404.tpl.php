@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.31, created on 2020-10-16 12:31:26
+/* Smarty version 3.1.31, created on 2020-10-16 15:06:52
   from "C:\localserver\OpenServer\domains\2br.local\protected\themes\base\smarty\core\404.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5f89686e58a1e8_62397293',
+  'unifunc' => 'content_5f898cdc03e928_04214858',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../system/sitemap.tpl' => 1,
   ),
 ),false)) {
-function content_5f89686e58a1e8_62397293 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f898cdc03e928_04214858 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_function_compress')) require_once 'C:\\localserver\\OpenServer\\domains\\2br.local\\protected\\app\\libs\\smarty.plugins\\function.compress.php';
 ?>
 <!DOCTYPE html>
