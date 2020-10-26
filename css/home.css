@@ -202,12 +202,11 @@
 
 #projects .project {
   display: block;
-  width: 30vw;
-  height: 30vw;
+  width: calc(33vw - 5px);
+  height: calc(33vw - 5px);
   position: relative;
   overflow: hidden;
   margin: 5px;
-  flex-grow: 1;
 }
 
 @media (min-width: 1900px) {
@@ -254,6 +253,7 @@
   transform: translateX(-50%);
   transform-origin: center center;
   transition: transform .2s;
+  width: auto;
 }
 
 #projects .project .header-wrapper {

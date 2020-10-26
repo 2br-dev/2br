@@ -97,7 +97,7 @@ class homePageModule extends Module
     private function getProjectList() {
         $result = [];
         // получить все видимые проекты
-        $response = Q("SELECT id, label, preview, content, preview_video FROM `db_mdd_projects` WHERE visible = 1 ORDER BY `ord` DESC LIMIT 9", [])->all();
+        $response = Q("SELECT id, label, preview, content, preview_video FROM `db_mdd_projects` WHERE visible = 1 ORDER BY `ord` DESC LIMIT 12", [])->all();
         if(empty($response)) {
             return $result;
         }

@@ -80,6 +80,7 @@ class WorksPageModule extends Module
                 $filter = 'digital';
             }
         }
+        // exit(__($this->getProjectList($filterValue)));
         //
         return [
             'template' => 'block',
@@ -92,9 +93,9 @@ class WorksPageModule extends Module
         $result = [];       
         // получить все видимые проекты
         if(!is_null($filterValue)) {
-            $response = Q("SELECT id, label, preview, content FROM `db_mdd_projects` WHERE visible = 1 AND project_type = ?s OR project_type = 11 ORDER BY `created` DESC", [$filterValue])->all();
+            $response = Q("SELECT id, label, preview, content, preview_video FROM `db_mdd_projects` WHERE visible = 1 AND project_type = ?s OR project_type = 11 ORDER BY `created` DESC", [$filterValue])->all();
         } else {
-            $response = Q("SELECT id, label, preview, content FROM `db_mdd_projects` WHERE visible = 1 ORDER BY `created` DESC", [$filterValue])->all();
+            $response = Q("SELECT id, label, preview, content, preview_video FROM `db_mdd_projects` WHERE visible = 1 ORDER BY `created` DESC", [$filterValue])->all();
         }
         if(empty($response)) {
             return $result;
@@ -107,12 +108,24 @@ class WorksPageModule extends Module
             $result[$key]['content'] = $row['content'];
             // парсинг превью
             $preview = $file->getFilesByGroup($row['preview'], ['original'], ['alt', 'file'], true);
+            $preview_video = $file->getFilesByGroup($row['preview_video'], ['original'], ['file']);
+
+            
+
             if(!empty($preview)) {
                 $preview = array_shift($preview);
                 // 
                 $result[$key]['preview'] = [
                     'alt' => $preview['original']['alt'],
-                    'src' => str_ireplace("\\", "/", $preview['original']['file'])
+                    'src' => str_ireplace("\\", "/", $preview['original']['file']),
+                    'type' => 'image'
+                ];
+            }else if(!empty($preview_video)){
+                $preview_video = array_shift($preview_video);
+                // 
+                $result[$key]['preview'] = [
+                    'src' => str_ireplace("\\", "/", $preview_video['file']),
+                    'type' => 'video'
                 ];
             }
         }   

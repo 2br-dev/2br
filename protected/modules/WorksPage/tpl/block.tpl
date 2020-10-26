@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="/css/works.css">
+<link rel="stylesheet" href="/css/home.css">
 <!--  -->
 <main class="main">
     <section class="banner">
@@ -16,27 +17,37 @@
         </div>
         <!--  -->
         <!-- projects -->
-        <section class="projects">
+        <section id="projects">
         {if !empty($projectList)}
             {assign var='counter' value=0}
             
             {foreach $projectList as $project}
-            <a {if !empty($project['content'])}href="/raboty?id={$project['id']}&filter={$filter}"{/if} class="projects__item">
-                <img src="{$project['preview']['src']}" alt="{$project['preview']['alt']}" class="projects__img">
+            <a {if !empty($project['content'])}href="/raboty?id={$project['id']}&filter={$filter}"{/if} class="project">
+                {* <img src="{$project['preview']['src']}" alt="{$project['preview']['alt']}" class="projects__img"> *}
+                {if $project['preview']['type'] === 'video'}
+                    <video src="{$project['preview']['src']}" loop muted autoplay ></video>
+                {/if}
+                {if $project['preview']['type'] === 'image'}
+                    <img src="{$project['preview']['src']}" alt="{$project['preview']['alt']}" class="projects__img">
+                {/if}
                 <!--  -->
-                <div class="projects__mask">
+                {* <div class="projects__mask">
                     <div class="projects__mask_convas">
                         <p class="projects__mask_text">{$project['label']}</p>
                     </div>
-                </div>
+                </div> *}
+                <div class="header-wrapper">
+                    <div class="header-content">{$project['label']}</div>
+                    {* <div class="subheader">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, aut.</div> *}
+                </div>  
             </a>
             {$counter = $counter + 1}
             {/foreach}
-            {if $counter % 2 === 1}
+            {* {if $counter % 2 === 1}
                 <div class="projects__item projects__item-stub">
                     <p class="projects__item-stub_title">В разработке</p>
                 </div>
-            {/if}
+            {/if} *}
         {/if}
         </section>
         <!-- /projects -->
